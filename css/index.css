@@ -1,0 +1,24 @@
+input{width: 500px !important;}
+.center{text-align: center;}
+.outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+  }
+  .card{min-height: 300px !important;
+    min-width: 736px !important;
+padding: 20px !important;}
