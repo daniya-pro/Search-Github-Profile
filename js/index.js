@@ -1,4 +1,6 @@
 function executeData(){
+    var loader= document.getElementById('loader')
+    loader.style.display='block'
     var userName =document.getElementById('userName').value
     if(userName){
     
@@ -6,7 +8,9 @@ function executeData(){
 (res)=>res.json()
 )
 .then(data=>{
-    console.log(data)  
+    
+// console.log()
+if(data.message===undefined){
     var datestr=new Date(data.created_at).toDateString()
 var timestr=new Date().toLocaleTimeString([],{hour12: true,hour:"2-digit",minute:'2-digit'})
      document.getElementById('YourUserName').innerHTML=data.login
@@ -15,9 +19,19 @@ var timestr=new Date().toLocaleTimeString([],{hour12: true,hour:"2-digit",minute
    document.getElementById('following').innerHTML="folllowings : "+ data.following
    document.getElementById('follower').innerHTML="followers : "+data.followers
    document.getElementById('imgUrl').src=data.avatar_url
-   document.getElementById('card').style.display='block'
+   document.getElementById('card').style.display='block'}else{
+document.getElementById('card').style.display='none'
+  var acc = document.getElementById('acc')
+  acc.style.display='block'
+acc.innerHTML=document.getElementById('userName').value+"'s account does not exist please try again later with a new name"
+   }
+    loader.style.display='none'
+
 })
-.catch(()=>{alert("userName not found")
+.catch(()=>{
+    loader.style.display='none'
+    
+    alert("userName not found")
 })
 }
 }

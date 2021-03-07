@@ -22,3 +22,20 @@ input{width: 500px !important;}
   .card{min-height: 300px !important;
     min-width: 736px !important;
 padding: 20px !important;}
+
+#loader{
+
+  background: aliceblue;
+  z-index: 9;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+
+#acc{
+
+color: red;
+text-align: center;
+}

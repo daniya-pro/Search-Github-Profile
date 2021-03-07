@@ -11,16 +11,18 @@
     </head>
         
     <body>
-
-   <div class="center"> 
-    <div class="ui input">
+      <div style='display: none;' id='loader'class='ui segment'>  <div class="ui active loader"></div>
+    </div>
+<div class="center"> 
+    <div style="margin:20px" class="ui input">
       <input id='userName' type="text" placeholder="tell username of somone you need info about of his github account">
 
     </div>
 
   <button class="ui inverted secondary button" onClick='executeData()' >ENTER</button>
-
-
+   </div>
+   
+<h1 id='acc' style='display: none;'>account not found</h1>
 
            <div id='card' class="centered ui card" style='display: none;'>
             <div  class="image">
@@ -48,8 +50,6 @@
           </div>
 
 
-     <script src="./Semantic-UI-CSS-master/package.json"></script>
-     <script src="./Semantic-UI-CSS-master/semantic.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>
