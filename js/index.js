@@ -6,7 +6,7 @@ function executeData(){
 (res)=>res.json()
 )
 .then(data=>{
-//  avatar_url" 
+    console.log(data)   //  avatar_url" 
      document.getElementById('YourUserName').innerHTML=data.login
      document.getElementById('joinedAt').innerHTML=`Joined In ${data.created_at}`
  document.getElementById('bio').innerHTML=data.bio
