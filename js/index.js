@@ -6,9 +6,11 @@ function executeData(){
 (res)=>res.json()
 )
 .then(data=>{
-    console.log(data)   //  avatar_url" 
+    console.log(data)  
+    var datestr=new Date(data.created_at).toDateString()
+var timestr=new Date().toLocaleTimeString([],{hour12: true,hour:"2-digit",minute:'2-digit'})
      document.getElementById('YourUserName').innerHTML=data.login
-     document.getElementById('joinedAt').innerHTML=`Joined In ${data.created_at}`
+     document.getElementById('joinedAt').innerHTML=`Joined In ${datestr} At ${timestr}`
  document.getElementById('bio').innerHTML=data.bio
    document.getElementById('following').innerHTML="folllowings : "+ data.following
    document.getElementById('follower').innerHTML="followers : "+data.followers
