@@ -28,10 +28,10 @@ acc.innerHTML=document.getElementById('userName').value+"'s account does not exi
     loader.style.display='none'
 
 })
-.catch(()=>{
+.catch((e)=>{
     loader.style.display='none'
     
-    alert("userName not found")
+    alert(e)
 })
 }
 }
